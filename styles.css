@@ -1,0 +1,192 @@
+/* styles.css */
+.gamepad-data {
+    display: none;
+}
+.label {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    width: 40px; /* Set a fixed width and height to make the labels circular */
+    height: 40px;
+    line-height: 40px; /* Center the text vertically */
+    text-align: center; /* Center the text horizontally */
+    background-color: transparent; /* Default background color */
+    border-radius: 50%; /* Make the labels circular */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  }
+  
+  .active-label {
+    background-color: #ff5733; /* Highlight color */
+    color: white; /* Change text color for better contrast */
+    transform: scale(1.1); /* Slightly increase size */
+  }
+  
+.compass {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+}
+
+
+
+.octagon-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    /* Adjust size as needed */
+    height: 60px;
+    /* Adjust size as needed */
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    /* Solid color for the octagon */
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.pointer-north,
+.pointer-south,
+.pointer-east,
+.pointer-west,
+.pointer-ne,
+.pointer-se,
+.pointer-sw,
+.pointer-nw {
+    position: absolute;
+    top: 50%;
+    /* Align with the center */
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.pointer-north {
+    border-bottom: 135px solid #ff0000;
+    /* Adjusted length for pointer */
+}
+
+.pointer-south {
+    transform: translate(-50%, 0) rotate(180deg);
+    border-bottom: 135px solid #ff0000;
+}
+
+.pointer-east {
+    transform: translate(240%, -50%) rotate(90deg);
+    border-bottom: 135px solid #ff0000;
+}
+
+.pointer-west {
+    transform: translate(-350%, -50%) rotate(-90deg);
+    border-bottom: 135px solid #ff0000;
+}
+
+.pointer-ne {
+    transform: translate(40px, -90px) rotate(45deg);
+    border-bottom: 81px solid #00ff00;
+}
+
+.pointer-se {
+    transform: translate(40px, 10px) rotate(135deg);
+    border-bottom: 81px solid #00ff00;
+}
+
+.pointer-sw {
+    transform: translate(-60px, 10px) rotate(225deg);
+    border-bottom: 81px solid #00ff00;
+}
+
+.pointer-nw {
+    transform: translate(-60px, -90px) rotate(-45deg);
+    border-bottom: 81px solid #00ff00;
+}
+
+.label {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.label-north {
+    top: 2px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.label-south {
+    bottom: 2px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.label-east {
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+}
+
+.label-west {
+    top: 50%;
+    left: 6px;
+    transform: translate(0, -50%);
+}
+
+.label-ne {
+    top: 20%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.label-se {
+    top: 80%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.label-sw {
+    top: 80%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.label-nw {
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+    user-select: none;
+    /* Prevent text selection */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition */
+}
+
+.button.active {
+    background-color: #ff5733;  /*  #ff00ff  */
+    /* Highlight color */
+    transform: scale(1.1);
+    /* Slightly increase size */
+}
